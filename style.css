@@ -1,0 +1,598 @@
+@import url('https://fonts.googleapis.com/css2?family=Monda:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+:root {
+    --color-nav: rgb(220, 196, 142);
+    --color-fundo: rgba(32, 22, 81, 1);
+    --color-trasition: rgb(255, 255, 255);
+    --color-title: rgb(255, 255, 255);
+    --font-nav: "Monda", serif;
+    --font-title: "Bebas Neue", serif;
+    --font-description: "Open Sans", serif;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(32, 22, 81, 1);
+}
+header{
+    width: 94%;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    font-size: 16px;
+    font-family: var(--font-nav);
+    color: rgba(220, 196, 142, 1);
+}
+nav img{
+    width: 62px;
+    height: 62px;
+}
+ul{
+    display: flex;
+    list-style: none;
+}
+li{
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 15px;
+    transition: 0.4s ease; /* Suaviza a transição da cor */
+}
+li:hover{
+    color: rgb(255, 255, 255);
+    background-color: black;
+}
+nav a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: rgb(220, 196, 142);
+    text-transform: uppercase;
+    width: 105px;
+    height: 40px;
+}
+a img{
+    width: 20px;
+    height: 20px;
+    padding-left: 3px;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 30px;
+}
+main h1{
+    color: var(--color-title);
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-title);
+    font-size: 4rem;
+    z-index: 2;
+    margin: 60px 0px;
+}
+main .ball{
+    position: absolute;
+    width: 90px;
+    height: auto;
+    top: 252px;
+    left: 435px;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    margin: 100px 0px 200px 0px;
+}
+.content .lakers{
+    display: flex;
+    flex-direction: row;
+    width: 625px;
+    height: 300px;
+    background-color: rgb(253, 183, 10);
+    border-radius: 13px;
+    margin: 12px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.content .lakers:hover{
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.699);
+    transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+}
+.content .lakers .card-info h2{
+    color: rgb(255, 255, 255);
+}
+.content .lakers .card-info p{
+    color: rgb(57, 40, 136);
+}
+.content .lakers .card-info h4{
+    color: rgb(255, 255, 255);
+}
+.content .lakers .card-info h4 span{
+    color: rgb(57, 40, 136);
+}
+.content .atlanta{
+    display: flex;
+    flex-direction: row;
+    width: 625px;
+    height: 300px;
+    border-radius: 13px;
+    background-color: #EE1B24;
+    margin: 12px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.content .atlanta:hover{
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.699);
+    transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+}
+
+.content .atlanta .card-info h2{
+    color: #ffffff;
+}
+.content .atlanta .card-info p{
+    color: black;
+}
+.content .atlanta .card-info h4{
+    color: #ffffff;
+}
+.content .atlanta .card-info h4 span{
+    color: #FFF307;
+}
+.content .thunder{
+    display: flex;
+    flex-direction: row;
+    width: 625px;
+    height: 300px;
+    border-radius: 13px;
+    background-color: #FA3C02;
+    margin: 12px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.content .thunder:hover{
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.699);
+    transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+}
+
+.content .thunder .card-info h2{
+    color: #0301CC;
+}
+.content .thunder .card-info p, h4{
+    color: #ffffff;
+}
+.content .thunder .card-info h4 span{
+    color:#0301CC;
+}
+.content .warriors{
+    display: flex;
+    flex-direction: row;
+    width: 625px;
+    height: 300px;
+    border-radius: 13px;
+    background-color: #000000;
+    margin: 12px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.content .warriors:hover{
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.699);
+    transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+}
+
+.content .warriors .card-info h2{
+    color: rgb(255, 243, 7);
+}
+.content .warriors .card-info p, h4{
+    color: #100eac;
+}
+.content .warriors .card-info h4 span{
+    color: rgb(255, 243, 7);
+}
+.content .pelicans{
+    display: flex;
+    flex-direction: row;
+    width: 625px;
+    height: 300px;
+    border-radius: 13px;
+    background-color: rgba(190, 154, 97, 1);
+    margin: 12px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.content .pelicans:hover{
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.699);
+    transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+}
+
+.content .pelicans .card-info h2{
+    color: rgba(21, 45, 73, 1);
+}
+.content .pelicans .card-info p, h4{
+    color: rgba(254, 254, 254, 1);
+}
+.content .pelicans .card-info h4 span{
+    color: rgba(21, 45, 73, 1);
+}
+.content .sacramento{
+    display: flex;
+    flex-direction: row;
+    width: 625px;
+    height: 300px;
+    border-radius: 13px;
+    background-color: rgba(102, 49, 137, 1);
+    margin: 12px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.content .sacramento:hover{
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.699);
+    transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+}
+
+.content .sacramento .card-info h2{
+    color: rgba(15, 15, 15, 1);
+}
+.content .sacramento .card-info p, h4{
+    color: rgba(254, 254, 254, 1);
+}
+.content .sacramento .card-info h4 span{
+    color: rgba(15, 15, 15, 1);
+}
+.content .spurs{
+    display: flex;
+    flex-direction: row;
+    width: 625px;
+    height: 300px;
+    border-radius: 13px;
+    background-color: rgba(158, 158, 158, 1);
+    margin: 12px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.content .spurs:hover{
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.699);
+    transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+}
+
+.content .spurs .card-info h2{
+    color: rgba(10, 10, 10, 1);
+}
+.content .spurs .card-info p, h4{
+    color: rgba(254, 254, 254, 1);
+}
+.content .spurs .card-info h4 span{
+    color: rgba(10, 10, 10, 1);
+}
+.content .nuggets{
+    display: flex;
+    flex-direction: row;
+    width: 625px;
+    height: 300px;
+    border-radius: 13px;
+    background-color: rgba(193, 1, 63, 1);
+    margin: 12px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.content .nuggets:hover{
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.699);
+    transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+}
+
+.content .nuggets .card-info h2{
+    color: rgba(253, 190, 31, 1);
+}
+.content .nuggets .card-info p, h4{
+    color: rgba(254, 254, 254, 1);
+}
+.content .nuggets .card-info h4 span{
+    color: rgba(16, 23, 139, 1);
+}
+.content .dallas{
+    display: flex;
+    flex-direction: row;
+    width: 625px;
+    height: 300px;
+    border-radius: 13px;
+    background-color: rgba(10, 33, 83, 1);
+    margin: 12px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.content .dallas:hover{
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.699);
+    transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+}
+
+.content .dallas .card-info h2{
+    color: rgba(2, 54, 199, 1);
+}
+.content .dallas .card-info p, h4{
+    color: rgba(254, 254, 254, 1);
+}
+.content .dallas .card-info h4 span{
+    color: rgba(2, 54, 199, 1);
+}
+.content .knicks{
+    display: flex;
+    flex-direction: row;
+    width: 625px;
+    height: 300px;
+    border-radius: 13px;
+    background-color: rgba(10, 10, 10, 1);
+    margin: 12px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.content .knicks:hover{
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.699);
+    transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+}
+
+.content .knicks .card-info h2{
+    color: rgba(2, 54, 199, 1);
+}
+.content .knicks .card-info p, h4{
+    color: rgba(254, 254, 254, 1);
+}
+.content .knicks .card-info h4 span{
+    color: rgba(253, 108, 12, 1);
+}
+
+/* Informações que ficam dentro do card */
+.card-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 350px;
+    height: 280px;
+    padding: 7px;
+
+}
+.card-info h2{
+    margin: 0;
+    text-align: left;
+    font-family: var(--font-title);
+    font-size: 25px;
+}
+.card-info p{
+    margin: 0;
+    font-family: var(--font-description);
+    font-size: 13px;
+}
+.card-info h4{
+    margin: 0;
+    font-family: var(--font-title);
+    font-weight: 300;
+}
+.content img{
+    width: 230px;
+    height: auto;
+    padding: 10px;
+}
+.content img:hover{
+    transform: translateX(-4px);
+}
+
+/* Estilos da seções e enquadramento */
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 100vh;
+}
+section h1{
+    text-shadow: 5px 5px 0 var(--color-nav); /* Sombra para criar o contorno */
+    transform: rotate(2deg); /* Inclinação */
+    margin-bottom: 20px;
+}
+section p{
+    display: flex;
+    width: 900px;
+    font-family: var(--font-description);
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+section img{
+    width: 80%;
+    position: absolute;
+    z-index: -1;
+}
+.teams{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 910px;
+    height: 100vh;
+    margin: 150px 0px;
+}
+.teams img{
+    width: 180px;
+    height: 179px;
+    padding: 30px;
+}
+.teams .img-lakers{
+    width: 180px;
+    height: 140px;
+}
+.teams .img-cleveland{
+    width: 140px;
+    height: 180px;
+}
+.teams .img-clippers{
+    width: 180px;
+    height: 150px;
+}
+.teams .img-heat{
+    width: 160px;
+    height: 180px;
+}
+.teams .img-spurs{
+    width: 180px;
+    height: 130px;
+}
+.teams .img-warriors{
+    width: 180px;
+    height: 195px;
+}
+.teams .img-jazz{
+    width: 180px;
+    height: 140px;
+}
+.legends{
+    margin-top: 300px;
+}
+.container-cards{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.container-cards img{
+    width: 230px;
+    height: 220px;
+}
+.container-cards .title-legend{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 228px;
+    height: 40px;
+}
+.container-cards .title-legend img{
+    width: 35px;
+    height: 35px;
+    display: block;
+}
+.container-cards .title-legend h3{
+    text-align: center;
+    font-family: var(--font-title);
+    font-size: 27px;
+}
+.card-kobe{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 261px;
+    height: 326px;
+    background-color: rgba(217, 217, 217, 1);
+    border-radius: 8px;
+    box-shadow: 0px 4px 43px rgba(0, 0, 0, 0.801);
+}
+.card-larry{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 261px;
+    height: 326px;
+    background-color: rgba(217, 217, 217, 1);
+    border-radius: 8px;
+    position: absolute;
+    top: 304.8px;
+    left: calc(50% - 355.96px);
+    transform: rotate(-5deg);
+    box-shadow: 0px 4px 43px rgba(0, 0, 0, 0.801);
+}
+.card-trophy{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 261px;
+    height: 326px;
+    background-color: rgba(217, 217, 217, 1);
+    border-radius: 8px;
+    box-shadow: 0px 4px 43px rgba(0, 0, 0, 0.801);
+    transform: rotate(2deg);
+
+}
+.card-allen{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 261px;
+    height: 326px;
+    position: absolute;
+    top: 315.95px;
+    left: calc(50% + 86.8px);
+    background-color: rgba(217, 217, 217, 1);
+    border-radius: 8px;
+    box-shadow: 0px 4px 43px rgba(0, 0, 0, 0.801);
+    z-index: 2;
+    transform: rotate(2deg);
+
+}
+.card-jordan{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 261px;
+    height: 326px;
+    background-color: rgba(217, 217, 217, 1);
+    border-radius: 8px;
+    box-shadow: 0px 4px 43px rgba(0, 0, 0, 0.801);
+    transform: rotate(-1deg);
+}
+footer{
+    width: 100%;
+    height: 200px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(217, 217, 217, 1);
+}
+.footer-links li {
+    display: inline;
+}
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+.footer-links a {
+    text-decoration: none;
+    color: var(--color-fundo);
+    text-transform: uppercase;
+    font-family: var(--font-nav);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.footer-links a:hover {
+    color: var(--color-nav);
+}
